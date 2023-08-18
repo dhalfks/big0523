@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또추첨기 Ver 1.0</title>
+</head>
+<body>
+  <h1>
+    1 ~ 45 까지의 중복되지 않는 숫자 6개가 랜덤으로 추출후 순서대로 출력하기<br>
+    단, Set 객체를 사용할 것
+  </h1>
+  <button type="button" id="makeRandom">랜덤번호 6개 출력하기</button>
+  <h1 id="printNum"></h1>
+  <button type="button" id="makeRandom2">당첨번호 7개(마지막은 보너스~) 출력하기</button>
+  <h1 id="printNum2"></h1>
+  <button type="button" onclick="rank();">결과확인</button>
+  
+  <h1 id="printResult"> </h1>
+  <button type="button" onclick="reset();">reset</button>
+  <script>
+
+    const rNumArr = [];
+    document.getElementById('makeRandom').addEventListener('click',function(){
+      // document.getElementById('printNum').innerText='';
+
+      const rNumSet = new Set();
+      console.log(rNumSet.size);
+
+      // do {
+      //   rNumSet.add(Math.floor(Math.random()*45)+1);
+      // } while (rNumSet.size < 6);
+
+      for (let i = 0;  rNumSet.size < 6; i++) {
+        let rNum = Math.floor(Math.random()*45)+1;
+        rNumSet.add(rNum);
+        console.log(i, rNum); // 반복문이 실행된 횟수 : 추출된 번호
+      }
+      console.log(rNumSet);
+
+      // Set 자체를 sort할수 없음.  배열을 만든 후 sort
+      // const rNumArr = [];
+      for (const rNum of rNumSet) {
+        rNumArr.push(rNum);
+      }
+      document.getElementById('printNum').innerText 
+      = rNumArr.sort(function(a, b) {return a - b});
+      //set비우기
+      rNumSet.clear();
+    });
+    const rNumArr2 = [];
+    document.getElementById('makeRandom2').addEventListener('click',function(){
+      // document.getElementById('printNum2').innerText ='';
+      const rNumSet = new Set();
+      console.log(rNumSet.size);
+
+      // do {
+      //   rNumSet.add(Math.floor(Math.random()*45)+1);
+      // } while (rNumSet.size < 6);
+
+      for (let i = 0;  rNumSet.size < 7; i++) {
+        let rNum = Math.floor(Math.random()*45)+1;
+        rNumSet.add(rNum);
+        console.log(i, rNum); // 반복문이 실행된 횟수 : 추출된 번호
+      }
+      console.log(rNumSet);
+
+      // Set 자체를 sort할수 없음.  배열을 만든 후 sort
+      // const rNumArr = [];
+      for (const rNum of rNumSet) {
+        rNumArr2.push(rNum);
+      }
+      document.getElementById('printNum2').innerText 
+      = rNumArr2.sort(function(a, b) {return a - b});
+    });
+
+    function rank(){
+      let cnt = 0;
+      // for(let i=0; i=rNumArr.size; i++){
+      //   for(let j=0; j=rNumArr.size; j++){
+      //     if(rNumArr[i] === rNumArr2[j]){
+      //       cnt++;
+      //       console.log(rNumArr[i]);
+      //     }
+      //   }
+      // }
+      for(const a of rNumArr){
+        for(const b of rNumArr2){
+          if(a==b){
+            cnt++;
+          }
+        }
+      }
+
+      console.log(typeof rNumArr[1], rNumArr2[1]);
+      console.log(cnt);
+
+      let print = '';
+      switch(cnt){
+        case 6: print = '축!! 1등 당첨!!'; break;
+        case 5: 
+          for(let i=0; i=rNumArr.size; i++){
+            if(rNumArr[i] == rNumArr2[rNumArr2.size]){
+              print = '축!! 2등 당첨!!';
+            }else{
+              print = '축!! 3등 당첨!!'
+            }
+          }
+          break;
+        case 4: print = '축!! 4등 당첨!!'; break;
+        case 3: print = '축!! 5등 당첨!!'; break;
+        default: print = '꽝~!!';
+      }
+
+      document.getElementById('printResult').innerText = print;
+
+    }
+
+    function reset(){
+      //splice(index, count) : index부터 count까지 제거
+      //splice(index, count, item... ) : item은 제거한 후 다른 요소 삽입
+      rNumArr.splice(0,6);
+      rNumArr2.splice(0,7);
+      document.getElementById('printNum').innerText ='';
+      document.getElementById('printNum2').innerText ='';
+      document.getElementById('printResult').innerText='';
+    }
+
+  </script>
+</body>
+</html>

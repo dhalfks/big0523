@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 생성</title>
+</head>
+<body>
+    <h1>
+        1~45까지의 중복되지 않는 숫자 6개를 랜덤으로 추출 => 출력
+        set 객체를 사용하여 생성
+    </h1>
+    <button type="button">랜덤번호 6개 생성(출력)</button>
+    <h1 id="printNum"></h1>
+    <button type="button">당첨번호 7개(마지막번호는 보너스번호) 출력</button>
+    <h1 id="printNum2"></h1>
+    <button type="button">결과확인</button>
+    <h1 id="printResult"></h1>
+
+    <script>
+        const rNumSet = new Set();
+        console.log(rNumSet);
+    </script>
+</body>
+</html>

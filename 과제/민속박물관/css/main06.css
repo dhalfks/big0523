@@ -1,0 +1,96 @@
+#wrap { width: 100%; min-width: 1600px; }
+/* 공통 */
+.inner { width: 1170px; margin: auto; position: relative; box-sizing: border-box; }
+
+#header { width: 100%;  }
+#header .inner { height: 115px; }
+#header h1 { position: absolute; left: 0; top: 20px; }
+#header .top-menu { position: absolute; right: 0; top: 15px; display: flex; }
+#header .top-menu li { margin-left: 10px; }
+#header .top-menu li:last-child { margin-left: 30px; }
+#header .top-menu li:first-child::after { content:""; display: inline-block; width: 1px; height: 10px; background: #dcdcdc; margin-left: 10px; }
+#header .top-menu li a { font-size: 14px; }
+#header .nav { position: absolute; top: 60px; left: 320px; }
+#header .nav .gnb {display: flex;}
+#header .nav .gnb li { margin-right: 75px; }
+#header .nav .gnb li a {font-size: 20px; }
+
+#visual { width: 100%; height: 725px; background: #FFB74D;}
+#conatiner {}
+#content {}
+/* 첫페이지 페이지명 */
+.main {}
+/* 컨텐츠 공통부분 */
+.main .con-box { width: 100%; }
+.main .con-box .inner { padding: 120px 0;}
+.main .con-box h2 { font-size: 40px; text-align: center; line-height: 1; margin-bottom: 25px; }
+.main .con-box h2 + p { margin-bottom: 55px; text-align: center; font-size: 18px; }
+
+/* 각영역 */
+.main .con1 { background: #FFAB91;; }
+.main .con1 .inner{ height: 100px; padding: 0 0; background: #FF7043; }
+
+.main .con2 { background-repeat: no-repeat; background-position: 0 0; background-image: url(../images/mainCon1_bg.jpg); background-size: cover;}
+.main .con2 .inner{ }
+.main .con2 h2 { color:#fff }
+.main .con2 h2 + p { color:#fff }
+.main .con2 ul { display: flex; justify-content: space-between; }
+.main .con2 ul li {}
+.main .con2 ul li a {position: relative;}
+.main .con2 ul li a::after { content:""; display: block; width: 570px; height: 500px; border: 3px solid #fff; position: absolute; left: -2px; top: -2px; transition: 0.3s; opacity: 0;} 
+.main .con2 ul li:hover a::after { opacity: 1; }
+
+.main .con2 ul li a img { }
+.main .con2 ul li a h3 { font-size: 25px; font-weight: 500; text-align: center; padding:25px 0; color:#fff}
+
+
+.main .con3 { background-repeat: no-repeat; background-position: 0 0; background-image: url(../images/mainCon2_bg.jpg); background-size: cover;}
+.main .con3 .inner{ }
+.main .con3 ul { display: flex; justify-content: space-between; }
+.main .con3 ul li {  }
+.main .con3 ul li a { display: block; transition: 0.3s; }
+.main .con3 ul li:hover a { box-shadow: 10px 10px 15px rgba(0,0,0,0.4); }
+.main .con3 ul li a img {  }
+.main .con3 ul li a h3 {  font-size: 25px; font-weight: 500; text-align: center; padding:25px 0; background:#fff; color:#000 }
+.main .con3 ul li:hover a h3 { color:#fff; background: tomato;}
+
+.main .con4 { }
+.main .con4 .inner{ }
+.main .con4 .news { display: flex; justify-content: space-between; }
+.main .con4 .news article { width: 575px; box-sizing: border-box; }
+.main .con4 .news .left { padding: 40px; border: 1px solid #dcdcdc; position: relative; }
+.main .con4 .news .left h3 { font-size: 20px; font-weight: 600; margin-bottom: 25px; }
+.main .con4 .news .left h3 + a { display: block; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 1px solid #dcdcdc; }
+.main .con4 .news .left h3 + a p { font-size: 20px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden; margin-bottom: 60px; }
+.main .con4 .news .left h3 + a span { }
+.main .con4 .news .left ul { }
+.main .con4 .news .left ul li { font-weight: 300; margin-bottom: 5px;  }
+.main .con4 .news .left ul li:last-child { margin-bottom: 0px;  }
+.main .con4 .news .left ul li a { white-space: nowrap; text-overflow: ellipsis; display: inline-block; width: 400px; overflow: hidden;  font-size: 18px; }
+.main .con4 .news .left ul li span { float: right; font-size: 16px;  }
+.main .con4 .news .left .more { position: absolute; right: 40px; top: 40px; }
+.main .con4 .news .left .more a::after { content:"+"; display: inline-block; width: 20px; height: 20px; background: tomato; border-radius: 50%; text-align: center; line-height: 20px; color:#fff; margin-left: 10px; vertical-align: middle; }
+
+.main .con4 .news .right {}
+.main .con4 .news .right ul { display: flex; justify-content: space-between;}
+.main .con4 .news .right ul li {}
+.main .con4 .news .right ul li a {display: block; width: 275px; height: 190px; border: 1px solid #dcdcdc; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 40px; text-align: center; padding-top: 130px; }
+.main .con4 .news .right ul li:first-child a { background-image: url(../images/mainCon3_util1_img1.png);}
+.main .con4 .news .right ul li:last-child a {background-image: url(../images/mainCon3_util1_img2.png);}
+.main .con4 .news .right ul li a strong { font-size: 16px; font-weight: 600; }
+.main .con4 .news .right div { width: 100%; height: 190px; background-repeat: no-repeat; background-position: 0 0; background-size: cover; background-image: url(../images/mainCon3_banner.jpg); padding: 40px; box-sizing: border-box; margin-top: 49px; }
+.main .con4 .news .right div p:first-child { font-size: 30px; color:#fff; line-height: 1.3; margin-bottom: 15px; }
+.main .con4 .news .right div .more {}
+.main .con4 .news .right div .more a { color:#fff; font-weight: 500; font-size: 16px; padding-right: 40px; background-repeat: no-repeat; background-position: 100% 50%; background-image: url(../images/mainCon3_banner_icon.png); }
+
+#footer { border-top: 1px solid #999;   }
+#footer .inner { height: 320px;  }
+#footer .inner::after { content:""; display: block; width: 100%; height: 1px; background: #dcdcdc; position: absolute; left: 0; top: 110px; }
+#footer p { font-size: 16px; margin-bottom: 10px;  }
+#footer p:first-child { padding-top: 60px; margin-bottom: 60px; }
+#footer p:last-of-type { margin-top: 30px;  }
+#footer .family {position: absolute; right: 0; top: 140px;  }
+#footer .family .title { display: block; width: 210px; line-height: 40px; border: 1px solid #dcdcdc; text-indent: 20px; background-repeat: no-repeat; background-position: right 20px top 50%; background-image: url(../images/sel_icon.png);}
+#footer .family ul { position: absolute; top: 41px; left: 0; display: none; }
+#footer .family ul li {}
+#footer .family ul li a { display: block; width: 210px; line-height: 35px; border: 1px solid #dcdcdc; background-color: #fff; margin-top: -1px; text-indent: 20px; }

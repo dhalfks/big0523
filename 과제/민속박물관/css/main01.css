@@ -1,0 +1,29 @@
+#wrap { width: 100%; min-width: 1600px; }
+/* 공통 */
+.inner { width: 1170px; margin: auto; position: relative; box-sizing: border-box; }
+
+#header { width: 100%; background: #FFECB3; }
+#header .inner { height: 115px; background: #FFD54F;}
+#visual { width: 100%; height: 725px; background: #FFB74D;}
+#conatiner {}
+#content {}
+/* 첫페이지 페이지명 */
+.main {}
+/* 컨텐츠 공통부분 */
+.main .con-box { width: 100%; }
+.main .con-box .inner { padding: 120px 0;}
+/* 각영역 */
+.main .con1 { background: #FFAB91;; }
+.main .con1 .inner{ height: 100px; padding: 0 0; background: #FF7043; }
+
+.main .con2 {background: #A5D6A7;}
+.main .con2 .inner{ height: 890px; background: #66BB6A;}
+
+.main .con3 { background: #E6EE9C;}
+.main .con3 .inner{ height: 715px; background: #CDDC39; }
+
+.main .con4 { background: #C5E1A5; }
+.main .con4 .inner{ height: 800px; background: #689F38;}
+
+#footer { background: #FFECB3;}
+#footer .inner { height: 320px; background: #FFC107; }

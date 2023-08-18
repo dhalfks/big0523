@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <img id="pic" src="/image/pic00.jpg" alt="">
+    </div>
+    <script>
+        //고양이이미지에 마우스를 올리면 다른 그림으로 변경
+        //마우스가 영역을 벗어나면 기존그림으로 다시 변경
+        let pic = document.getElementById('pic');
+        pic.addEventListener('mouseover',()=>{
+            pic.src = "/image/pic01.jpg";
+        })
+
+        pic.addEventListener('mouseout', ()=>{
+            pic.src="/image/pic00.jpg";
+        })
+    </script>
+</body>
+</html>
